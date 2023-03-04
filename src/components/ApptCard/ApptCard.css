@@ -1,7 +1,9 @@
 .card-container {
+  margin: 0 15px 15px;
   padding: 15px;
-  width: 350px;
+  max-width: 300px;
   min-width: 300px;
+  flex: 0 0 350px;
   height: 400px;
   display: flex;
   flex-direction: column;
@@ -9,6 +11,12 @@
   border: 3px solid black;
   border-radius: 15px;
   background-color: hwb(159 70% 2% / 0.767);
+}
+
+@media screen and (max-width: 800px) {
+  .card-container {
+    margin: 0 0 15px 0;
+  }
 }
 
 .card-management-div {

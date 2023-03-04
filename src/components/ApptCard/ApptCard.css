@@ -1,0 +1,67 @@
+.card-container {
+  padding: 15px;
+  width: 350px;
+  min-width: 300px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  border: 3px solid black;
+  border-radius: 15px;
+  background-color: hwb(159 70% 2% / 0.767);
+}
+
+.card-management-div {
+  margin: 0 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+h2 {
+  font-weight: 800;
+  font-size: 1.5rem;
+  margin-bottom: 2px;
+}
+
+p {
+  font-size: 1.1rem;
+  word-break: break-all;
+  white-space: normal;
+}
+
+.overflow {
+  overflow: auto;
+  overflow-x: hidden;
+  height: 95px;
+}
+
+.overflow::-webkit-scrollbar {
+  width: 12px;
+}
+
+.overflow::-webkit-scrollbar-track {
+  background: rgb(233, 128, 80);
+}
+
+.overflow::-webkit-scrollbar-thumb {
+  background-color: rgb(122, 173, 250);
+  border-radius: 20px;
+  border: 3px solid rgb(233, 128, 80);
+}
+
+.card-management-div {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  width: 115px;
+  height: 35px;
+  border: 2px solid black;
+  border-radius: 15px;
+  background-color: aliceblue;
+}
+
+#delete-button {
+  background-color: rgb(255, 189, 156);
+}

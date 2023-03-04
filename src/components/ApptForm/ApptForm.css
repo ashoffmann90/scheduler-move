@@ -1,0 +1,36 @@
+h1 {
+  font-weight: 800;
+  font-size: 1.8rem;
+}
+
+label {
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+input,
+select {
+  width: 100%;
+  height: 30px;
+  background-color: aliceblue;
+}
+
+input[type='date']::-webkit-calendar-picker-indicator,
+input[type='time']::-webkit-calendar-picker-indicator {
+  font-size: 1.3rem;
+}
+
+textarea {
+  width: 100%;
+  min-height: 75px;
+  background-color: aliceblue;
+}
+
+.info-div {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#create-button {
+  width: 100%;
+}

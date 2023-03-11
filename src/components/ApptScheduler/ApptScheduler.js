@@ -11,7 +11,7 @@ function ApptScheduler() {
   }
 
   const editAppt = (appointment) => {
-    var updatedApptList = [...apptList]
+    let updatedApptList = [...apptList]
     let apptToEditIndex = updatedApptList.findIndex(
       (appt) => appt.id === appointment.id
     )
@@ -20,7 +20,7 @@ function ApptScheduler() {
   }
 
   const deleteAppt = (appointment) => {
-    var updatedApptList = [...apptList]
+    let updatedApptList = [...apptList]
     let apptToDeleteIndex = updatedApptList.findIndex(
       (appt) => appt.id === appointment.id
     )

@@ -12,6 +12,7 @@ function ApptForm({ appt, createAppt, editAppt, isEditing, setIsEditing }) {
     description: '',
   }
 
+  // if editing, populate form with current appt values, otherwise using empty form values for new appt
   const [formData, setFormData] = useState(isEditing ? appt : initialCreateData)
 
   const onChange = (e) => {

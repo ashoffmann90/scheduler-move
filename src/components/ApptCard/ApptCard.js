@@ -5,7 +5,7 @@ import './ApptCard.css'
 function ApptCard({ appt, apptList, editAppt, deleteAppt }) {
   const [isEditing, setIsEditing] = useState(false)
 
-  const edit = () => {
+  const openEditor = () => {
     setIsEditing(!isEditing)
   }
 
@@ -38,7 +38,7 @@ function ApptCard({ appt, apptList, editAppt, deleteAppt }) {
             <p className='overflow'>{appt.description}</p>
           </div>
           <div className='card-management-div'>
-            <button onClick={edit}>Edit Appointment</button>
+            <button onClick={openEditor}>Edit Appointment</button>
             <button id='delete-button' onClick={onDelete}>
               Delete Appointment
             </button>

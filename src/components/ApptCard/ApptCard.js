@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import ApptForm from '../ApptForm/ApptForm'
 import './ApptCard.css'
 
-function ApptCard({ appt, apptList, setApptList }) {
+function ApptCard({ appt, apptList, editAppt, deleteAppt }) {
   const [isEditing, setIsEditing] = useState(false)
 
   const edit = () => {
@@ -10,12 +10,7 @@ function ApptCard({ appt, apptList, setApptList }) {
   }
 
   const onDelete = (e) => {
-    var updatedApptList = [...apptList]
-    let apptToDeleteIndex = updatedApptList.findIndex(
-      (appointment) => appointment.id === appt.id
-    )
-    updatedApptList.splice(apptToDeleteIndex, 1)
-    setApptList(updatedApptList)
+    deleteAppt(appt)
   }
 
   return (
@@ -53,7 +48,7 @@ function ApptCard({ appt, apptList, setApptList }) {
         <ApptForm
           appt={appt}
           apptList={apptList}
-          setApptList={setApptList}
+          editAppt={editAppt}
           isEditing={isEditing}
           setIsEditing={setIsEditing}
         />

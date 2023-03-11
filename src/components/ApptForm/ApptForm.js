@@ -1,7 +1,7 @@
 import React, { useState, useId } from 'react'
 import './ApptForm.css'
 
-function ApptForm({ appt, apptList, setApptList, isEditing, setIsEditing }) {
+function ApptForm({ appt, createAppt, editAppt, isEditing, setIsEditing }) {
   const apptId = useId()
 
   const initialCreateData = {
@@ -32,7 +32,7 @@ function ApptForm({ appt, apptList, setApptList, isEditing, setIsEditing }) {
       location: formData.location,
       description: formData.description,
     }
-    setApptList([...apptList, newAppt])
+    createAppt(newAppt)
     setFormData({
       id: apptId + Date.now(),
       date: '',
@@ -44,10 +44,6 @@ function ApptForm({ appt, apptList, setApptList, isEditing, setIsEditing }) {
 
   const onEdit = (e) => {
     e.preventDefault()
-    var updatedApptList = [...apptList]
-    let apptToEditIndex = updatedApptList.findIndex(
-      (appt) => appt.id === formData.id
-    )
     const updatedAppt = {
       id: formData.id,
       date: formData.date,
@@ -55,8 +51,7 @@ function ApptForm({ appt, apptList, setApptList, isEditing, setIsEditing }) {
       location: formData.location,
       description: formData.description,
     }
-    updatedApptList.splice(apptToEditIndex, 1, updatedAppt)
-    setApptList(updatedApptList)
+    editAppt(updatedAppt)
     setIsEditing(false)
   }
 

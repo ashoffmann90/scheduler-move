@@ -1,10 +1,10 @@
 import ApptForm from '../ApptForm/ApptForm'
 import './CreateApptForm.css'
 
-function CreateApptForm({ apptList, setApptList }) {
+function CreateApptForm({ createAppt }) {
   return (
     <div className='form-container'>
-      <ApptForm apptList={apptList} setApptList={setApptList} />
+      <ApptForm createAppt={createAppt} />
     </div>
   )
 }

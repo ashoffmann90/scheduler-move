@@ -2,7 +2,7 @@ import React from 'react'
 import ApptCard from '../ApptCard/ApptCard'
 import './ApptList.css'
 
-function ApptList({ apptList, setApptList }) {
+function ApptList({ apptList, editAppt, deleteAppt }) {
   return (
     <div className='list-div'>
       {apptList.length ? (
@@ -11,7 +11,8 @@ function ApptList({ apptList, setApptList }) {
             key={index}
             appt={appt}
             apptList={apptList}
-            setApptList={setApptList}
+            editAppt={editAppt}
+            deleteAppt={deleteAppt}
           />
         ))
       ) : (
